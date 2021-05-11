@@ -31,12 +31,8 @@ Program using express to add, remove, modify sql database
 ## Demo Pictures
 
 
-![image](https://user-images.githubusercontent.com/66793863/117508525-5bf49e80-af4e-11eb-8b94-56f7dd76523a.png)
-![image](https://user-images.githubusercontent.com/66793863/117508574-70d13200-af4e-11eb-98b9-f3cf41b873b2.png)
-
-
 ## Credits:
-Made by: Kurtis Jin
+Made by: Kurtis Jin, Katherine Jackson, Britt Bot, Justin Akers
 
 ## Licenses:
 1. Your Badge: ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -53,6 +49,9 @@ N/A
 Test was done using node.js with visual studio code, chrome, insomnia, and workbench
 
 ## Questions:
-1. Please click the link for Github: <a href = "https://github.com/kurtisjin">My Github Site</a>
-2. Please click the link for my Website: <a href = "https://www.kurtisjin.com">My Website</a>
-3. Email: kurtisjin21@gmail.com 
+1. Please click the link for Github: <a href = "https://github.com/kurtisjin">Kurtis's Github Site</a>
+2. Please click the link for Github: <a href = "https://github.com/britt-bot">Britt's Github Site</a>
+3. Please click the link for Github: <a href = "https://github.com/Jakers811">Justin's Github Site</a>
+4. Please click the link for Github: <a href = "https://github.com/Jakers811">Katherine's Github Site</a>
+5. Please click the link for my Website: <a href = "https://www.kurtisjin.com">Kurtis Website</a>
+6. Email: kurtisjin21@gmail.com 
