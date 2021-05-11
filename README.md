@@ -52,6 +52,6 @@ Test was done using node.js with visual studio code, chrome, insomnia, and workb
 1. Please click the link for Github: <a href = "https://github.com/kurtisjin">Kurtis's Github Site</a>
 2. Please click the link for Github: <a href = "https://github.com/britt-bot">Britt's Github Site</a>
 3. Please click the link for Github: <a href = "https://github.com/Jakers811">Justin's Github Site</a>
-4. Please click the link for Github: <a href = "https://github.com/Jakers811">Katherine's Github Site</a>
+4. Please click the link for Github: <a href = "https://github.com/kjackson206">Katherine's Github Site</a>
 5. Please click the link for my Website: <a href = "https://www.kurtisjin.com">Kurtis Website</a>
 6. Email: kurtisjin21@gmail.com 
