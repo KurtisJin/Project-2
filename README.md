@@ -4,17 +4,43 @@
 
 ## Table of Contents:
   1. [Description](#description)
-  2. [Installation](#installation)
-  3. [Usage](#usage)
-  4. [Credits](#credits)
-  5. [License](#license)
-  6. [Features](#features)
-  7. [Contirbute](#contribute)
-  8. [Test](#test)
-  9. [Questions](#questions)
+  2. [UserStory](#Story)
+  3. [Installation](#installation)
+  4. [Usage](#usage)
+  5. [Credits](#credits)
+  6. [License](#license)
+  7. [Features](#features)
+  8. [Contirbute](#contribute)
+  9. [Test](#test)
+  10. [Questions](#questions)
 
 ## Description:
 Program using express to add, remove, modify sql database
+
+## Story
+### Goal: For the user to be able to search for festivals or schedule a festival.
+1. I want user to be able to load homepage and view current events.
+2. then I want the user to be able to click Login by clicking Login link.
+3. and then user is presented with Login/sign up page. 
+4. and then when user clicks login, user is presented with user profile.
+5. and if user clicks on sign-on upon filling out name, email, and password is presented to their profile page.
+6. and then when in profile page, it gives the option for you to fill out a new festival or be able to search for festivals.
+7. and then user will be able to save the upcoming festival or searched festivals for their favorites.
+8. and then user will be able to delete saved events and festivals.
+9. and then when user is logged out, user is sent back to the homepage. 
+
+##Story-Images
+
+Landing Page:
+![image](https://user-images.githubusercontent.com/66793863/117743626-bef36900-b1cc-11eb-9f20-9c52ff2e225f.png)
+
+Login Page:
+![image](https://user-images.githubusercontent.com/66793863/117743672-d92d4700-b1cc-11eb-8b12-456e5ab0bfb9.png)
+
+Profile Page:
+![image](https://user-images.githubusercontent.com/66793863/117743703-e813f980-b1cc-11eb-8a72-af58a0a5dbfd.png)
+
+
 
 ## Installation:
  You will need to install node.js, inquirer, mysql, and express.
