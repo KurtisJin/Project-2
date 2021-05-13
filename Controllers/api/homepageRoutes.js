@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const festivals = festivalData.map((project) => project.get({ plain: true }));
+    const festivals = festivalData.map((festivals) => festivals.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.get('/festivals/:id', async (req, res) => {
   try {
-    const festivalData = await Project.findByPk(req.params.id, {
+    const festivalData = await festivals.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -40,8 +40,8 @@ router.get('/festivals/:id', async (req, res) => {
 
     const festivals = festivalData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('festivals', {
+      ...festivals,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -55,7 +55,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: festivals }],
     });
 
     const user = userData.get({ plain: true });
