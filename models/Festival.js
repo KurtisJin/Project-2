@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Festivals extends Model {}
+class Festival extends Model {}
 
-Festivals.init (
+Festival.init(
+ 
     {
         id: {
           type: DataTypes.INTEGER,
@@ -21,7 +22,7 @@ Festivals.init (
         type: DataTypes.STRING,
         },
 
-    
+  
     },
     {
         sequelize,
