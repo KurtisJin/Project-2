@@ -6,7 +6,7 @@ User.hasMany(Festivals, {
   onDelete: 'CASCADE'
 });
 
-Project.belongsTo(User, {
+Festivals.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
