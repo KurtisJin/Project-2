@@ -1,11 +1,13 @@
+{{#each festivals as |festival|}}
 <ul class="collection">
   <li class="collection-item avatar">
-    <img src={{eventLogo}} alt="" class="circle">
-    <span class="title">{{eventName}}</span>
-    <p>{{eventSummary}}</p>
-    <p>{{eventDoorOpen}}</p>
-    <p>{{eventStart}}</p>
-    <p>{{eventStatus}}</p>
+    <img src={{festival.logo}} alt="" class="circle">
+    <span class="title">{{festival.name}}</span>
+    <p>{{festival.summary}}</p>
+    <p>{{festival.doors}}</p>
+    <p>{{festival.start}}</p>
+    <p>{{festival.status}}</p>
     <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
   </li>
   </ul>
+  {{/each}}
