@@ -1,16 +1,20 @@
 const {
   Model,
   DataTypes,
-  Festival
 } = require('sequelize');
+const Festival = require('./Festival');
 const sequelize = require('../config/connection');
 
-Result.init({
-  id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: `festival`,
-      key: `id`
+class Result extends Model {} 
+
+Result.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: `festival`,
+        key: `id`
+      }
     },
     name: {
       type: DataTypes.STRING,
@@ -21,9 +25,16 @@ Result.init({
       description: {
         type: DataTypes.STRING,
         references: `festival`,
-        key: `description`
+          key: `description`
       },
-      
     },
-  }
-})
+  },
+{
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'project',
+});
+  
+module.exports = Result;
