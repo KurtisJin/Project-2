@@ -41,8 +41,11 @@
               <!-- <a href="#" class="sidenav-trigger" data-target="slide_down"><i class="material-icons">menu</i></a> -->
               <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="/home">Home</a></li>
+                {{#if logged_in}}
                 <li><a href="/login">Signin</a></li>
+                {{else}}
                 <li><a href="/logout">Signout</a></li>
+                {{/if}}
         </ul>
         <ul id="slide-out" class="sidenav">
           <li><div class="user-view">
@@ -70,13 +73,16 @@
              
 <body>
     <main>
+      <section id="homePage" class="homePage" ></section>
+    
+
         {{{body}}}
     </main>
 <footer>
     <ul>
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Logout</a></li>
     </ul>
 </footer>
 
