@@ -1,11 +1,23 @@
+{{#each festivals as |festival|}}
 <ul class="collection">
   <li class="collection-item avatar">
-    <img src={{eventLogo}} alt="" class="circle">
-    <span class="title">{{eventName}}</span>
-    <p>{{eventSummary}}</p>
-    <p>{{eventDoorOpen}}</p>
-    <p>{{eventStart}}</p>
-    <p>{{eventStatus}}</p>
+    <img src={{festival.logo}} alt="" class="circle">
+    <span class="title">{{festival.name}}</span>
+    <p>{{festival.summary}}</p>
+    <p>{{festival.doors}}</p>
+    <p>{{festival.start}}</p>
+    <p>{{festival.status}}</p>
     <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
   </li>
   </ul>
+
+<ul class="pagination">
+  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+  <li class="active"><a href="/results/:query/:page">1</a></li>
+  <li class="waves-effect"><a href="/results/:query/:page">2</a></li>
+  <li class="waves-effect"><a href="/results/:query/:page">3</a></li>
+  <li class="waves-effect"><a href="/results/:query/:page">4</a></li>
+  <li class="waves-effect"><a href="/results/:query/:page">5</a></li>
+  <li class="waves-effect"><a href="/results/:query/:page"><i class="material-icons">chevron_right</i></a></li>
+</ul>
+{{/each}}
