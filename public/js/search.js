@@ -1,10 +1,10 @@
 const { Festivals } = require("../../models");
 
-app.get('/festivals/search', async (req, res) => {
+app.get('/publicsearch', async (req, res) => {
     const { resName } = req.query;
    
-    const restaurants = await Festivals.find({$text: {$search: resName}})
+    const festivalSearch = await Festivals.find({$text: {$search: resName}})
    
-    res.render('restaurants', { restaurants });
+    res.render('festivals', { festivalSearch });
    
    })

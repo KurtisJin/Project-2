@@ -31,6 +31,11 @@ Festival.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+  
+    image: {
+      default: ''
+    },  
+    
     user_id: {
       type: DataTypes.INTEGER,
       references: {
