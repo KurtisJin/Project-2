@@ -6,17 +6,17 @@ router.get('/', async (req, res) => {
   console.log('hello world!');
   try {
     // Get all festivals and JOIN with user data
-    // const festivalData = await Festivals.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    // });
+    const festivalData = await Festivals.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
 
     // Serialize data so the template can read it
-    // const festivals = festivalData.map((festivals) => festivals.get({ plain: true }));
+    const festivals = festivalData.map((festivals) => festivals.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('main', { 
