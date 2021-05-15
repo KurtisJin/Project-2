@@ -10,7 +10,7 @@
   5. [Credits](#credits)
   6. [License](#license)
   7. [Features](#features)
-  8. [Contirbute](#contribute)
+  8. [Contribute](#contribute)
   9. [Test](#test)
   10. [Questions](#questions)
 
@@ -46,7 +46,7 @@ Profile Page:
  You will need to install node.js, inquirer, mysql, and express.
 
 ## Usage:
-1. Create databse using workbench
+1. Create database using workbench
 2. Start mysql2 by logging in.
 3. start the server by running npm start on server.js
 4. use insomnia to test out localhost:3001 as port. 
@@ -82,7 +82,7 @@ Test was done using node.js with visual studio code, chrome, insomnia, and workb
 5. Please click the link for my Website: <a href = "https://www.kurtisjin.com">Kurtis Website</a>
 6. Please click the link for my Website: <a href = "https://www.kurtisjin.com">Britt's Website</a>
 7. Please click the link for my Website: <a href = "https://www.kurtisjin.com">Justin's Website</a>
-8. Please click the link for my Website: <a href = "https://www.kurtisjin.com">Katherin's Website</a>
+8. Please click the link for my Website: <a href = "https://www.kurtisjin.com">Katherine's Website</a>
 9. Kurtis Email: kurtisjin21@gmail.com 
 10. Britt's Email:
 11. Justin's Email:
