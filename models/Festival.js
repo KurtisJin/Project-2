@@ -46,10 +46,13 @@ Festival.init(
         model: 'user',
         key: 'id',
       },
-
     },
+<<<<<<< HEAD
   },
 
+=======
+  }, 
+>>>>>>> 7a827dc322f8f5b4f09ca2ff2f596a81e07927e4
 {
   sequelize,
   timestamps: false,
