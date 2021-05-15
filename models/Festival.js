@@ -46,10 +46,9 @@ Festival.init(
         model: 'user',
         key: 'id',
       },
-
     },
-  },
-}, {
+  }, 
+{
   sequelize,
   timestamps: false,
   freezeTableName: true,
