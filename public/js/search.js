@@ -1,3 +1,4 @@
+
 const { Festivals } = require("../../models");
 
 app.get('/publicsearch', async (req, res) => {
@@ -8,3 +9,4 @@ app.get('/publicsearch', async (req, res) => {
     res.render('festivals', { festivalSearch });
    
    })
+
