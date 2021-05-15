@@ -36,9 +36,9 @@ Festival.init(
       allowNull: false,
     },
   
-    image: {
-      default: ''
-    },  
+    // image: {
+    //   default: ''
+    // },  
     
     user_id: {
       type: DataTypes.INTEGER,
@@ -47,7 +47,8 @@ Festival.init(
         key: 'id',
       },
     },
-  }, 
+
+
 {
   sequelize,
   timestamps: false,
