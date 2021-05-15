@@ -48,7 +48,10 @@ Festival.init(
       },
     },
 
+
   },
+
+
 
 {
   sequelize,
