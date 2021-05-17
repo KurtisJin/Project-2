@@ -1,27 +1,32 @@
 const router = require('express').Router();
-const { Festivals, User } = require('../models');
+const { Festival, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   console.log('hello world!');
   try {
     // Get all festivals and JOIN with user data
-    const festivalData = await Festivals.findAll({
-      include: [
+    const festivalData = await Festival.findAll({
+      include: [User,
         {
-          model: User,
-          attributes: ['name'],
+          model: Festival,
+          attributes:['id', 'name', 'description', 'date_created', 'need_funding', 'lineup'],
+          include: {
+            attributes: ['name'],
+          }
+          
         },
       ],
     });
-
+    console.log(festivalData);
     // Serialize data so the template can read it
     const festivals = festivalData.map((festivals) => festivals.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('main', { 
+    res.render('homepage', { 
       festivals, 
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in,
+      user_name: req.session.username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -29,21 +34,24 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/festivals/:id', async (req, res) => {
+  console.log(req.params.id);
   try {
-    const festivalData = await festivals.findByPk(req.params.id, {
-      include: [
+    const festivalData = await Festival.findByPk(req.params.id, {
+      include: [User,
         {
-          model: User,
-          attributes: ['name'],
+
+          model: Festival,
+          attributes:['id', 'name', 'description', 'date_created', 'need_funding', 'lineup'],
         },
       ],
     });
 
     const festivals = festivalData.get({ plain: true });
-
-    res.render('festivals', {
+    
+    res.render('results', {
       ...festivals,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      user_name: req.session.username,
     });
   } catch (err) {
     res.status(500).json(err);
