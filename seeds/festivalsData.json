@@ -1,0 +1,9 @@
+{
+    "id" : 1,
+    "name": "john doe",
+    "description": "blah blah",
+    "date_created": "Jan 17th",
+    "needed_funding": 2.5,
+    "lineup": "HFS"
+
+}
