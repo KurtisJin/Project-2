@@ -15,11 +15,7 @@
 
 
 <ul class="pagination">
-  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-  <li class="active"><a href="/results/:query/:page">1</a></li>
-  <li class="waves-effect"><a href="/results/:query/:page">2</a></li>
-  <li class="waves-effect"><a href="/results/:query/:page">3</a></li>
-  <li class="waves-effect"><a href="/results/:query/:page">4</a></li>
-  <li class="waves-effect"><a href="/results/:query/:page">5</a></li>
-  <li class="waves-effect"><a href="/results/:query/:page"><i class="material-icons">chevron_right</i></a></li>
+  {{#each resultsPages as |page|}}
+  <li class="active"><a href="{{page.href}}">{{page.index}}</a></li>
+  {{/each}}
 </ul>
