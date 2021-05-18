@@ -1,7 +1,7 @@
 const User = require('./User');
 const Festival = require('./Festival');
 const Comments = require('./Comment');
-const Result = require('./Result')
+
 
 User.hasMany(Festival, {
   foreignKey: 'user_id',
@@ -18,10 +18,10 @@ User.hasMany(Comments, {
   onDelete: 'CASCADE'
 })
 
-User.hasMany(Result, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-})
+// User.hasMany(Result, {
+//   foreignKey: 'user_id',
+//   onDelete: 'CASCADE'
+// })
 
 module.exports = {
   User,
