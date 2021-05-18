@@ -7,18 +7,18 @@ router.get('/', async (req, res) => {
   try {
     // Get all festivals and JOIN with user data
     const festivalData = await Festival.findAll({
-      include: [User,
-        {
-          model: Festival,
-          attributes:['id', 'name', 'description', 'date_created', 'need_funding', 'lineup'],
-          include: {
-            attributes: ['name'],
-          }
+      // include: [User,
+      //   {
+      //     model: Festival,
+      //     attributes:['id', 'name', 'description', 'date_created', 'need_funding', 'lineup'],
+      //     include: {
+      //       attributes: ['name'],
+      //     }
           
-        },
-      ],
+      //   },
+      // ],
     });
-    console.log(festivalData);
+    // console.log(festivalData);
     // Serialize data so the template can read it
     const festivals = festivalData.map((festivals) => festivals.get({ plain: true }));
 
@@ -29,6 +29,7 @@ router.get('/', async (req, res) => {
       user_name: req.session.username,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -86,6 +87,16 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('signup');
 });
 
 module.exports = router;
