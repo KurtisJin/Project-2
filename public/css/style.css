@@ -20,11 +20,12 @@
 
 .logo {
     float: left;
-    padding: 10px 0;
-    max-height: 80px;
+    margin: 10px;
+    max-height: 100px;
 }
 
 /* navigation styling */
+
 
 .wrapper {
     position: fixed;
