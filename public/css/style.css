@@ -18,6 +18,11 @@
 
 }
 
+.logo {
+    float: left;
+    padding: 10px 0;
+    max-height: 80px;
+}
 
 /* navigation styling */
 
@@ -36,7 +41,6 @@
     font-size: 18px;
     font-weight: 600;
     margin-left: 15px;
-    
 }
 
 
@@ -50,21 +54,21 @@
 /* When hover, change the color of the links to teal */
 .wrapper .menu-bar li a:hover {
     color: rgb(18, 233, 233);
-
 }
-.wrapper .logo a{
+
+/* .wrapper .logo a {
     color: #fff;
     font-weight: 600;
     font-size: 35px;
     align-items: center;
- 
-}
-/* When hovering over my name, it changes color. */
-.wrapper .logo a:hover {
-    color:rgb(18, 233, 233);
-}   
+} */
 
-.wrapper .max-width{
+/* When hovering over my name, it changes color. */
+/* .wrapper .logo a:hover {
+    color:rgb(18, 233, 233);
+}    */
+
+.wrapper .max-width {
     display:flex;
     align-items: center;
     justify-content: space-between;
