@@ -12,7 +12,6 @@ router.get('/:query/:page?', async (req, res) => {
 
   searchResult = searchResult.data._embedded.events;
   console.log(searchResult[0].classifications);
-  // console.log(searchResult[0].classifications[0].subGenre);
   let filteredEvents = searchResult.filter(events => {
     return ('name' in events)
   });
