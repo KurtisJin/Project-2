@@ -1,5 +1,7 @@
 const User = require('./User');
 const Festival = require('./Festival');
+const Comments = require('./Comment');
+
 
 User.hasMany(Festival, {
   foreignKey: 'user_id',
@@ -7,8 +9,19 @@ User.hasMany(Festival, {
 });
 
 Festival.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
+
+User.hasMany(Comments, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+})
+
+// User.hasMany(Result, {
+//   foreignKey: 'user_id',
+//   onDelete: 'CASCADE'
+// })
 
 module.exports = {
   User,
