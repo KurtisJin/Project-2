@@ -8,7 +8,7 @@
 /* homePage section styling */
 .homePage {
     display: flex;
-    background: url("/pictures/purple.jpeg") no-repeat center;
+    background: url("/pictures/rainbowconfetti.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 700px;
@@ -18,8 +18,14 @@
 
 }
 
+.logo {
+    float: left;
+    margin: 10px;
+    max-height: 100px;
+}
 
 /* navigation styling */
+
 
 .wrapper {
     position: fixed;
@@ -36,7 +42,6 @@
     font-size: 18px;
     font-weight: 600;
     margin-left: 15px;
-    
 }
 
 
@@ -50,21 +55,21 @@
 /* When hover, change the color of the links to teal */
 .wrapper .menu-bar li a:hover {
     color: rgb(18, 233, 233);
-
 }
-.wrapper .logo a{
+
+/* .wrapper .logo a {
     color: #fff;
     font-weight: 600;
     font-size: 35px;
     align-items: center;
- 
-}
-/* When hovering over my name, it changes color. */
-.wrapper .logo a:hover {
-    color:rgb(18, 233, 233);
-}   
+} */
 
-.wrapper .max-width{
+/* When hovering over my name, it changes color. */
+/* .wrapper .logo a:hover {
+    color:rgb(18, 233, 233);
+}    */
+
+.wrapper .max-width {
     display:flex;
     align-items: center;
     justify-content: space-between;
