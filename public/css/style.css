@@ -37,25 +37,25 @@
 
 /* Target only the links */
 
-.wrapper .menu-bar li a{
+/* .wrapper .menu-bar li a{
     color: #fff;
     font-size: 18px;
     font-weight: 600;
     margin-left: 15px;
-}
+} */
 
 
-.wrapper .menu-bar li {
+/* .wrapper .menu-bar li {
     list-style:none;
     display: inline-block;
     position: relative;
 
-}
-
+} */
+/* 
 /* When hover, change the color of the links to teal */
-.wrapper .menu-bar li a:hover {
+/* .wrapper .menu-bar li a:hover {
     color: rgb(18, 233, 233);
-}
+} */ */
 
 /* .wrapper .logo a {
     color: #fff;
