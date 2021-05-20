@@ -1,12 +1,12 @@
 
-const { Festivals } = require("../../models");
+const searchHandler = async (event) =>{
+    event.preventDefault();
+    const query = document.querySelector("#search-input").value.trim();
 
-app.get('/publicsearch', async (req, res) => {
-    const { resName } = req.query;
-   
-    const festivalSearch = await Festivals.find({$text: {$search: resName}})
-   
-    res.render('festivals', { festivalSearch });
-   
-   })
-
+  if (query) {
+    document.location.replace(`/results/${query}`);
+  } else {
+    alert('Failed to create festival');
+  }
+}
+document.querySelector("#search-form").addEventListener("submit", searchHandler)

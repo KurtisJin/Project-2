@@ -1,5 +1,3 @@
-
-
 const festivalButtonClickHandler = async (event) => {
     const response = await fetch(`/api/festivals`, {
         method: 'POST',
@@ -10,7 +8,7 @@ const festivalButtonClickHandler = async (event) => {
     });
 
   if (response.ok) {
-    document.location.replace('/profile');
+    document.location.replace('/results');
   } else {
     alert('Failed to create festival');
   }
