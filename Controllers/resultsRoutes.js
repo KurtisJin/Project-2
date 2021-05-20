@@ -18,6 +18,7 @@ router.get('/:query/:page?', async (req, res) => {
 
     return {
       name: event.name,
+      id: event.id,
       summary: event.description,
       logo: event.images[event.images.length - 1].url,
       status: event.dates.status.code,
