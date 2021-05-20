@@ -2,15 +2,18 @@ const router = require('express').Router();
 const { Festival } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newFestival = await Festival.create({
+    console.log("we are here!")
+    const favorite = await Festival.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newFestival);
+    res.status(200).json(favorite);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
