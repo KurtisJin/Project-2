@@ -7,7 +7,7 @@
     <p>{{festival.doors}}</p>
     <p>{{festival.start}}</p>
     <p>{{festival.status}}</p>
-    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    <a href="#!" class="secondary-content festival_button "><i data-id="{{festival.id}}" class="material-icons">grade</i></a>
   </li>
 </ul>
 {{/each}}
@@ -17,3 +17,5 @@
   <li class="active"><a href="{{page.href}}">{{page.index}}</a></li>
   {{/each}}
 </ul>
+
+ <script src="/js/results.js"></script>
