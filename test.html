@@ -1,52 +1,19 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
+{{#each festivals as |festival|}}
+<ul class="collection">
+  <li class="collection-item avatar">
+    <img src={{festival.logo}} alt="" class="circle">
+    <span class="title">{{festival.name}}</span>
+    <p>{{festival.summary}}</p>
+    <p>{{festival.doors}}</p>
+    <p>{{festival.start}}</p>
+    <p>{{festival.status}}</p>
+    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+  </li>
+</ul>
+{{/each}}
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create New Festival Proposal:</h3>
-
-    <form class="form new-festival-form">
-      <div class="form-group">
-        <label for="festival-name">Festival Name:</label>
-        <input class="form-input" type="text" id="festival-name" name="festival-name" />
-      </div>
-      <div class="form-group">
-        <label for="festival-funding">Needed Funding ($):</label>
-        <input class="form-input" type="number" id="festival-funding" name="festival-funding" />
-      </div>
-      <div class="form-group">
-        <label for="festival-desc">Description:</label>
-        <textarea class="form-input" id="festival-desc" name="festival-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="festival-lineup">Lineup:</label>
-        <textarea class="form-input" id="festival-lineup" name="festival-lineup"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
-
-  {{#if festivals.length}}
-  <div class="col-md-6 festival-list">
-    <h3>Current Festival Proposals:</h3>
-
-    {{#each festivals as |festival|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/festival/{{festival.id}}">{{festival.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{festival.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
-
-<script src="./js/profile.js"></script>
+<ul class="pagination">
+  {{#each resultsPages as |page|}}
+  <li class="active"><a href="{{page.href}}">{{page.index}}</a></li>
+  {{/each}}
+</ul>
