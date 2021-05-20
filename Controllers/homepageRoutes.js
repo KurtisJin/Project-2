@@ -34,6 +34,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 router.get('/festivals/:id', async (req, res) => {
   console.log(req.params.id);
   try {
