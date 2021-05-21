@@ -78,7 +78,11 @@ nav i {
     justify-content: center;
     padding: 0 !important;
     margin-left: 10px;
+    box-shadow: 10px 30px 60px 30px #ff3399;
+
 }
+
+
   
 footer {
     color: cornsilk !important;
