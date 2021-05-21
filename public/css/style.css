@@ -22,29 +22,24 @@
 .logo {
     /* margin: 10px; */
     max-height: 100px;
-
 }
 
 /* navigation styling */
-.header {
+nav {
     position: fixed;
     width: 100%;
-    background-color: crimson;
-    font-family: sans-serif;
-    padding: 15px 0;
-    height: 100px;
-}
-
-
-nav {
-    height: 100px !important;
     background-color: #ff3399 !important;
+    height: 100px !important;
+    font-family: sans-serif;
 }
 
-nav i {
-    line-height: 0;
-    height: 25px;
-    font-size: 24px;
+nav i.material-icons {
+    line-height: 40px !important;
+    height: 40px !important;
+}
+
+a.nav-link {
+    
 }
 
 .max-width {
@@ -70,20 +65,22 @@ nav i {
     background-color: cornsilk;
     justify-content: center;
     align-items: center;
+    margin-top: 8px;
+    text-indent: 7px;
+    height: 41px;
 }
   
 .searchButton {
     background-color: darkorchid !important;
-    height: 56px !important;
+    height: 40px !important;
     justify-content: center;
+    align-items: center;
     padding: 0 !important;
     margin-left: 10px;
     box-shadow: 10px 30px 60px 30px #ff3399;
-
 }
 
 
-  
 footer {
     color: cornsilk !important;
     background: #111;
