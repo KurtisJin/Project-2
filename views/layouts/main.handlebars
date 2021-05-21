@@ -24,24 +24,20 @@
    
             
 </head>
-  <header>
     <!-- I have made wrapper the parent of the entire nav section -->
-    <a class="nav-link" href="/"><img class="logo" alt="logo" src="../pictures/logo4.png"></a>
-    <nav>
-        <a href="/" class="brand-logo"></a>
-              <!-- <a href="#" class="sidenav-trigger" data-target="slide_down"><i class="material-icons">menu</i></a> -->
-              {{#if logged_in}}
+      <nav>
+          <a class="logo" href="/"><img class="logo" alt="logo" src="../pictures/logo4.png"></a>
+          <!-- <a href="#" class="sidenav-trigger" data-target="slide_down"><i class="material-icons">menu</i></a> -->
+            {{#if logged_in}}
               <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="/home">Home</a></li>
                 
                 <span class="username">{{userName}}</span>
                 <button class="no-button" id="logout">logout</button>
 
-              {{else}}
-              <a class="nav-link" href="/login">Sign In</a>
-              <a class="nav-link" href="/signup">Sign Up</a> 
-              <a class="nav-link" href="/profile">Profile</a>
-              {{/if}}
+            {{else}}
+              <a class="nav-link" href="/login">Sign In</a> | <a class="nav-link" href="/signup">Sign Up</a> | <a class="nav-link" href="/profile">Profile</a>
+            {{/if}}
         </ul>
         {{!-- <ul id="slide-out" class="sidenav">
           <li><div class="user-view">
@@ -59,14 +55,12 @@
           <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
         </ul>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>          --}}
-        <form id="search-form" class="form w-100">
-        <input id="search-input" class="form-input w-100 autocomplete" type="text" name="action" placeholder="Search festivals here...">
-        <button class="btn btn-info btn-block pulse waves-effect waves-light">Search</button>
-  </form>    
-
-    </nav>
-</div>
-</header>  
+        <form id="search-form" class="form">
+          <input id="search-input" class="form-input autocomplete" type="text" name="action" placeholder="Search festivals...">
+          <a class="btn waves-effect searchButton"><i class="material-icons">search</i></a>
+        </form>
+      </nav>
+ 
 
 <body>
     <main>
@@ -77,11 +71,7 @@
 
     </main>
 <footer>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#" id="logout">Logout</a></li>
-    </ul>
+  <a href="#">Home</a> | <a href="#">Contact Us</a> | <a href="#">Logout</a>
 </footer>
 {{#if logged_in}}
   <script src="/js/logout.js"></script>
