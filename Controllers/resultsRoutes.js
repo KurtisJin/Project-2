@@ -6,7 +6,15 @@ router.get('/:query', async (req, res) => {
   var searchResult;
   const page = req.params.page ? req.params.page : 1;
   try {
+<<<<<<< HEAD
    const response = await axios.get('https://app.ticketmaster.com/discovery/v2/events?apikey=pETvCuGAevOjovqF0cqFbAly9fYBD9vZ&keyword=' + req.params.query + '&locale=en-us&countryCode=US&segmentName=music&page=' + page);
+=======
+    
+    const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=${process.env.event_API_key}&keyword=`
+
+
+   const response = await axios.get(url + req.params.query + '&locale=en-us&countryCode=US&segmentName=music&page=' + page);
+>>>>>>> 1a72117d92e1c960d500586fd127b1a195c9b832
   
    searchResult = response.data._embedded.events;
 
@@ -37,7 +45,11 @@ router.get('/:query', async (req, res) => {
     resultsPages.push({index:index,href:"/results/"+req.params.query+"/"+index});
   }
 
+<<<<<<< HEAD
   console.log(festivals)
+=======
+  // console.log(festivals)
+>>>>>>> 1a72117d92e1c960d500586fd127b1a195c9b832
 
   res.render("results", {
     festivals,
