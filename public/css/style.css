@@ -38,8 +38,9 @@ nav i.material-icons {
     height: 40px !important;
 }
 
-a.nav-link {}
-
+a.nav-link {
+    
+}
 
 .max-width {
     max-width: 1300px;
