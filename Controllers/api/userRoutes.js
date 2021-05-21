@@ -12,13 +12,13 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
 
 router.post('/login', async (req, res) => {
   try {
-    console.log(userData);
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
@@ -45,6 +45,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -59,5 +60,6 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   } 
 });
+
 
 module.exports = router;

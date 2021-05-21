@@ -1,11 +1,11 @@
 // const axios = require('axios');
-// const { Festival } = require('../../models');
+// const { Festival } = require('../models');
 const router = require('express').Router();
 // const sequelize = require('sequelize');
 
 router.get('/', async (req, res) => {
   // let eventId= [];
-  try { 
+  try {
     // eventId = Festival.findAll({
   //   where: {
   //     user_id: req.params.id,
