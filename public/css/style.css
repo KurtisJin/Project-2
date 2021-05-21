@@ -3,37 +3,114 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    border: 2px dotted red;
 }
+
 
 /* homePage section styling */
 .homePage {
     /* display: flex; */
     background: url("/pictures/rainbowconfetti.jpg") no-repeat center;
     height: 100vh;
-    color: #fff;
+    color: cornsilk;
     min-height: 700px;
     /* background-size: cover; */
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
-
 }
 
 .logo {
-    float: left;
-    margin: 10px;
+    /* margin: 10px; */
     max-height: 100px;
+
 }
 
 /* navigation styling */
-
-
-.wrapper {
+.header {
     position: fixed;
     width: 100%;
     background-color: crimson;
     font-family: sans-serif;
     padding: 15px 0;
+    height: 100px;
 }
+
+
+nav {
+    height: 100px !important;
+    background-color: #ff3399 !important;
+}
+
+nav i {
+    line-height: 0;
+    height: 25px;
+    font-size: 24px;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search-form {
+    display: flex;
+    position:relative;
+    /* border-radius: 50%; */
+    transform: translate(50%, 10%);
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-input {
+    background-color: cornsilk;
+    justify-content: center;
+    align-items: center;
+}
+  
+.searchButton {
+    background-color: darkorchid !important;
+    height: 56px !important;
+    justify-content: center;
+    padding: 0 !important;
+    margin-left: 10px;
+    box-shadow: 10px 30px 60px 30px #ff3399;
+
+}
+
+
+  
+footer {
+    color: cornsilk !important;
+    background: #111;
+    padding: 15px 23px;
+    text-align: center;
+}
+
+footer a{
+    color: cornsilk !important;
+    text-align: center;
+}
+
+footer a:hover {
+    color: darkorchid;
+    background: transparent;
+    /* text-decoration: underline; */
+    box-shadow: 10px 30px 60px 30px #ff3399;
+}
+
+
+
+
+
+
+
+
+
 
 /* Target only the links */
 
@@ -55,7 +132,7 @@
 /* When hover, change the color of the links to teal */
 /* .wrapper .menu-bar li a:hover {
     color: rgb(18, 233, 233);
-} */ */
+} */ 
 
 /* .wrapper .logo a {
     color: #fff;
@@ -69,28 +146,16 @@
     color:rgb(18, 233, 233);
 }    */
 
-.wrapper .max-width {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.max-width {
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-}
-
-.wrapper .menu-bar ul {
+/* .wrapper .menu-bar ul {
     display: none;
     position: absolute;
     background-color: #fff;
     justify-content: space-around;
     padding: 20px 14px;
     border-radius: 4px;
-}
+} */
 
-.wrapper .menu-bar ul li {
+/* .wrapper .menu-bar ul li {
     width: 180px;
     margin-top: 15px;
 }
@@ -109,67 +174,35 @@
 
 .wrapper .menu-bar li:hover ul  {
     display:block;
-}
+} */
 
-#search-form {
-    display: flex;
-    position:relative;
-    border-radius: 50%;
-    transform: translate(50%, 10%);
-    /* background: #2f3640; */
-    width: 50%;
-    align-items: center;
-  }
-  
-  #search-input {
-    /* background-color: #2f3640; */
-    /* border-radius: 10%; */
-    margin-right: .5%;
-    margin-top:2%;
-    margin-bottom: 5%;
-    color: #fff;
-  }
-  
-  .btn {
-    margin-bottom: 2.5%;
-  }
-  
-  /* label focus color */
-  #search-input input[type=text]:focus + label {
+
+/* label focus color */
+/* #search-input input[type=text]:focus + label {
     color: #000;
-  }
-  /* label underline focus color */
-  #search-input input[type=text]:focus {
+} */
+  
+/* label underline focus color */
+/* #search-input input[type=text]:focus {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* valid color */
-  #search-input input[type=text].valid {
+} */
+  
+/* valid color */
+/* #search-input input[type=text].valid {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* invalid color */
-  #search-input input[type=text].invalid {
+} */
+
+/* invalid color */
+/* #search-input input[type=text].invalid {
     border-bottom: 1px solid #000;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* icon prefix focus color */
-  #search-input .prefix.active {
+} */
+
+/* icon prefix focus color */
+/* #search-input .prefix.active {
     color: #000;
-  }
+} */
 
   /* footer section styling */
-footer{
-    background: #111;
-    padding: 15px 23px;
-    /* color: #fff; */
-    text-align: center;
-}
-footer .row a{
-    color: crimson;
-    text-decoration: none;
-}
-footer .row a:hover{
-    text-decoration: underline;
-    box-shadow: 10px 30px 60px 30px #0ff;
-}
