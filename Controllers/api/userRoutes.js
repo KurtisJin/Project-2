@@ -4,7 +4,7 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
-
+    console.log(userData.id)
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -12,6 +12,7 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -44,6 +45,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -56,7 +58,8 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
-  }
+  } 
 });
+
 
 module.exports = router;

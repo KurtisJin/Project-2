@@ -1,8 +1,5 @@
-const {
-  Model,
-  DataTypes
-} = require('sequelize');
-const sequelize = require('../config/connection');
+const {Model,DataTypes} = require('sequelize');
+const sequelize = require('../Config/connection');
 
 class Festival extends Model {}
 
@@ -14,38 +11,16 @@ Festival.init({
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
+  ticketmaster_id: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  description: {
-    type: DataTypes.STRING,
-  },
-  date_created: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW,
-  },
-  needed_funding: {
-    type: DataTypes.FLOAT,
-    allowNull: false,
-  },
-  lineup: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-
-  // image: {
-  //   default: ''
-  // },
-
   user_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'user',
       key: 'id',
     },
-
   },
 }, {
   sequelize,
