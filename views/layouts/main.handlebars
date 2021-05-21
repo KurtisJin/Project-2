@@ -20,47 +20,52 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/sidenav.js"></script>          
+    <script src="/js/sidenav.js"></script>
+   
+            
 </head>
-<header>
-  <nav>
+  <header>
     <!-- I have made wrapper the parent of the entire nav section -->
-    <form id="search-form" class="form w-100">
-      <input id="search-input" class="form-input w-100 autocomplete" type="text" name="action" placeholder="Search festivals...">
-      <a class="btn waves-effect searchButton"><i class="material-icons">search</i></a>
-    </form>
     <a class="nav-link" href="/"><img class="logo" alt="logo" src="../pictures/logo4.png"></a>
     <nav>
         <a href="/" class="brand-logo"></a>
-          <!-- <a href="#" class="sidenav-trigger" data-target="slide_down"><i class="material-icons">menu</i></a> -->
-            {{#if logged_in}}
-            <ul class="right hide-on-med-and-down">
+              <!-- <a href="#" class="sidenav-trigger" data-target="slide_down"><i class="material-icons">menu</i></a> -->
+              {{#if logged_in}}
+              <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="/home">Home</a></li>
-               
+                
                 <span class="username">{{userName}}</span>
                 <button class="no-button" id="logout">logout</button>
 
               {{else}}
-              <a class="nav-link" href="/login">Sign In</a> | <a class="nav-link" href="/signup">Sign Up</a> | <a class="nav-link" href="/profile">Profile</a>
+              <a class="nav-link" href="/login">Sign In</a>
+              <a class="nav-link" href="/signup">Sign Up</a> 
+              <a class="nav-link" href="/profile">Profile</a>
               {{/if}}
         </ul>
         {{!-- <ul id="slide-out" class="sidenav">
           <li><div class="user-view">
             <div class="background">
-            <img src="/pictures/rainbowconfetti.jpg">
+              <img src="/pictures/rainbowconfetti.jpg">
             </div>
             <a href="#user"><img class="circle" src="/pictures/girlface.jpg"></a>
             <a href="#name"><span class="white-text name">John Doe</span></a>
             <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-            </div></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-            <li><a href="#!">Second Link</a></li>
-            <li><div class="divider"></div></li>
-            <li><a class="subheader">Subheader</a></li>
-            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-            </ul>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>          --}}
+        <form id="search-form" class="form w-100">
+        <input id="search-input" class="form-input w-100 autocomplete" type="text" name="action" placeholder="Search festivals here...">
+        <button class="btn btn-info btn-block pulse waves-effect waves-light">Search</button>
+  </form>    
+
     </nav>
+</div>
 </header>  
 
 <body>
@@ -72,7 +77,11 @@
 
     </main>
 <footer>
-  <a href="#">Home</a> | <a href="#">Contact Us</a> | <a href="#">Logout</a>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#" id="logout">Logout</a></li>
+    </ul>
 </footer>
 {{#if logged_in}}
   <script src="/js/logout.js"></script>
