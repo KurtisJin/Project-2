@@ -3,7 +3,7 @@ const userRoutes = require('./userRoutes');
 const festivalRoutes = require('./favoriteRoutes');
 // const logout = require('')
 
-router.use('/users', userRoutes);
+router.use('/user', userRoutes);
 router.use('/festivals', festivalRoutes);
 
 module.exports = router;
