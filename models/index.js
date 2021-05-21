@@ -16,12 +16,7 @@ Festival.belongsTo(User, {
 User.hasMany(Comments, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
-})
-
-// User.hasMany(Result, {
-//   foreignKey: 'user_id',
-//   onDelete: 'CASCADE'
-// })
+});
 
 module.exports = {
   User,

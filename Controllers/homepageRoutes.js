@@ -5,31 +5,27 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   console.log('hello world!');
   try {
-    // Get all festivals and JOIN with user data
-    const festivalData = await Festival.findAll({
-      // include: [User,
-      //   {
-      //     model: Festival,
-      //     attributes:['id', 'name', 'description', 'date_created', 'need_funding', 'lineup'],
-      //     include: {
-      //       attributes: ['name'],
-      //     }
-          
-      //   },
-      // ],
-    });
+    // // Get all festivals and JOIN with user data
+    // const festivalData = await Festival.findAll({
+    //   include: [
+    //     {
+    //       model: Festival,
+    //       attributes:['ticketmaster_id'],
+    //     },
+    //   ],
+    // });
     // console.log(festivalData);
-    // Serialize data so the template can read it
-    const festivals = festivalData.map((festivals) => festivals.get({ plain: true }));
+    // // Serialize data so the template can read it
+    // const festivals = festivalData.map((festivals) => festivals.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      festivals, 
-      logged_in: req.session.logged_in,
-      user_name: req.session.username,
+      // festivals, 
+      // logged_in: req.session.logged_in,
+      // user_name: req.session.username,
     });
   } catch (err) {
-    console.log(err);
+    console.log('err');
     res.status(500).json(err);
   }
 });
@@ -41,9 +37,8 @@ router.get('/festivals/:id', async (req, res) => {
     const festivalData = await Festival.findByPk(req.params.id, {
       include: [User,
         {
-
           model: Festival,
-          attributes:['id', 'name', 'description', 'date_created', 'need_funding', 'lineup'],
+          attributes:['id', 'ticketmaster_id', 'user_id'],
         },
       ],
     });
@@ -84,7 +79,7 @@ router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     
-    res.redirect('/profileHost');
+    res.redirect('/profile');
     return;
   }
   console.log(req.session);
