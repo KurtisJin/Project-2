@@ -2,15 +2,14 @@ const axios = require('axios');
 const { response } = require('express');
 const router = require('express').Router();
 
-router.get('/:query/', async (req, res) => {
+router.get('/:query', async (req, res) => {
   var searchResult;
   const page = req.params.page ? req.params.page : 1;
   try {
-    console.log("QUERY HERE! RESULTS ROUTES")
    const response = await axios.get('https://app.ticketmaster.com/discovery/v2/events?apikey=pETvCuGAevOjovqF0cqFbAly9fYBD9vZ&keyword=' + req.params.query + '&locale=en-us&countryCode=US&segmentName=music&page=' + page);
-  //  console.log(response);
-  searchResult = response.data._embedded.events;
-  // console.log(searchResult[0].classifications);
+  
+   searchResult = response.data._embedded.events;
+
   let filteredEvents = searchResult.filter(events => {
     return ('name' in events)
   });
