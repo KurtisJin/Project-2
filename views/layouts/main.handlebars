@@ -79,15 +79,11 @@
     {{{body}}}
   </main>
 
-
-  <footer>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#" id="logout">Logout</a></li>
-    </ul>
-  </footer>
-  {{#if logged_in}}
+    </main>
+<footer>
+  <a href="#">Home</a> | <a href="#">Contact Us</a> | <a href="#" id-"logout">Logout</a>
+</footer>
+{{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
   <script src="/js/search.js"></script>
