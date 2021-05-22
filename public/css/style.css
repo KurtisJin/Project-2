@@ -8,6 +8,7 @@
 
 body {
     background: url("/pictures/rainbowconfetti.jpg") no-repeat center;
+    font-family: 'Comfortaa';
 }
 
 /* homePage section styling */
@@ -17,12 +18,13 @@ body {
     min-height: 700px;
     /* background-size: cover; */
     background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Comfortaa';
 }
 
 .logo {
     /* margin: 10px; */
     max-height: 100px;
+    transform: translate(30%, 0%);
 }
 
 /* navigation styling */
@@ -32,6 +34,7 @@ nav {
     background-color: #ff3399 !important;
     height: 100px !important;
     font-family: sans-serif;
+    color: #7B7B7B !important;
 }
 
 nav i.material-icons {
@@ -39,9 +42,28 @@ nav i.material-icons {
     height: 40px !important;
 }
 
-/* a.nav-link {
-    
-} */
+a.nav-link {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #7B7B7B;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: 18px;
+}
+
+a.nav-link:hover {
+    color: rgba(0, 255, 0, 1) !important;
+
+}
+
+.nav-bar {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #7B7B7B;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    transform: translate(7%, -165%);
+}
 
 .max-width {
     max-width: 1300px;
@@ -55,7 +77,7 @@ nav i.material-icons {
 #search-form {
     display: flex;
     position: relative;
-    transform: translate(50%, -140%);
+    transform: translate(95%, -217%);
     width: 50%;
     align-items: center;
     justify-content: center;
@@ -69,6 +91,8 @@ nav i.material-icons {
     margin-top: 8px;
     text-indent: 7px;
     height: 41px;
+    font-family: 'Comfortaa';
+    border-radius: 5px;
 }
   
 .searchButton {
@@ -78,6 +102,7 @@ nav i.material-icons {
     align-items: center;
     padding: 0 !important;
     margin-left: 10px;
+    border-radius: 5px;
     box-shadow: 10px 30px 60px 30px #000000;
 }
 
@@ -94,8 +119,7 @@ footer a{
 }
 
 footer a:hover {
-    color: darkorchid !important;
-    text-shadow: 100px 1px 5px rgba(0,255,0,0.72) !important;
+    color: rgba(153, 50, 204, 1) !important;
 }
 
 
