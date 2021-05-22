@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
     let festivalId = festivalData.map((festival) => festival.get({ plain: true }));
 
-    let user = festivalId[0].user.name;
+    // let user = festivalId[0].user.name;
 
     for (let index = 0; index < festivalId.length; index++) {
       const results = await axios.get(url + festivalId[index].ticketmaster_id + '&locale=en-us&countryCode=US&segmentName=music');
@@ -49,7 +49,7 @@ router.get('/', async (req, res) => {
 
   res.render("profile", {
     festivals,
-    user,
+    // user,
     logged_in: req.session.logged_in 
   })
   } catch (err) {
