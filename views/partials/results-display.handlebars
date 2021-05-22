@@ -1,4 +1,10 @@
-{{!-- {{#each festivals as |festival|}}
+<div class="row">
+  <div class="col-auto resultsHead">
+    <h2>Search Results:</h2>
+  </div>
+</div>
+
+{{#each festivals as |festival|}}
 <ul class="collection">
   <li class="collection-item avatar">
     <img src={{festival.logo}} alt="" class="circle">
@@ -7,7 +13,8 @@
     <p>{{festival.start}}</p>
     <p>{{festival.status}}</p>
     <p>{{festival.venues}}</p>
-    <a href="#!" class="secondary-content festival_button "><i data-id="{{festival.id}}" class="material-icons">grade</i></a>
+    <a href="#!" class="secondary-content festival_button "><i data-id="{{festival.id}}"
+        class="material-icons">grade</i></a>
   </li>
 </ul>
 {{/each}}
@@ -18,4 +25,4 @@
   {{/each}}
 </ul>
 
- <script src="/js/results.js"></script> --}}
+<script src="/js/results.js"></script>
