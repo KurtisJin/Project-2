@@ -1,3 +1,10 @@
+:root {
+    --primary: #03A9F4;
+    --secondary: #29B6F6;
+    --terciary: #B2EBF2;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,82 +14,69 @@
 }
 
 
+/* nav bar */
+
+.logo {
+    float: left;
+    padding: 10px 0;
+    max-height: 80px;
+}
+
+nav {
+    padding: 0 10px 0 10px;
+    background-color: var(--primary);
+}
+
+nav .right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+
+.nav-wrapper form {
+    margin: auto;
+    width: 50%;
+}
+
+.nav-wrapper .input-field {
+    padding-top: 7px;
+}
+
+.nav-wrapper form #search {
+    height: 50px;
+}
+
+
+nav .right img {
+    margin: 17px;
+    height: 30px;
+    width: 30px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+nav .right .imgProfil a {
+    height: 64px;
+}
+
+.hidden {
+    display: none;
+}
+
+
 /* homePage section styling */
 .homePage {
     /* display: flex; */
     background: url("/pictures/rainbowconfetti.jpg") no-repeat center;
-    height: 100vh;
-    color: cornsilk;
+    height: 30vh;
+    /* color: cornsilk; */
     min-height: 700px;
     /* background-size: cover; */
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
-
-.logo {
-    /* margin: 10px; */
-    max-height: 100px;
-
-}
-
-/* navigation styling */
-.header {
-    position: fixed;
-    width: 100%;
-    background-color: crimson;
-    font-family: sans-serif;
-    padding: 15px 0;
-    height: 100px;
-}
-
-
-nav {
-    height: 100px !important;
-    background-color: #ff3399 !important;
-}
-
-nav i {
-    line-height: 0;
-    height: 25px;
-    font-size: 24px;
-}
-
-.max-width {
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#search-form {
-    display: flex;
-    position:relative;
-    /* border-radius: 50%; */
-    transform: translate(50%, 10%);
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-}
-
-#search-input {
-    background-color: cornsilk;
-    justify-content: center;
-    align-items: center;
-}
-  
-.searchButton {
-    background-color: darkorchid !important;
-    height: 56px !important;
-    justify-content: center;
-    padding: 0 !important;
-    margin-left: 10px;
-    box-shadow: 10px 30px 60px 30px #ff3399;
-
-}
-
-
   
 footer {
     color: cornsilk !important;
@@ -106,103 +100,3 @@ footer a:hover {
 
 
 
-
-
-
-
-
-
-/* Target only the links */
-
-/* .wrapper .menu-bar li a{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    margin-left: 15px;
-} */
-
-
-/* .wrapper .menu-bar li {
-    list-style:none;
-    display: inline-block;
-    position: relative;
-
-} */
-/* 
-/* When hover, change the color of the links to teal */
-/* .wrapper .menu-bar li a:hover {
-    color: rgb(18, 233, 233);
-} */ 
-
-/* .wrapper .logo a {
-    color: #fff;
-    font-weight: 600;
-    font-size: 35px;
-    align-items: center;
-} */
-
-/* When hovering over my name, it changes color. */
-/* .wrapper .logo a:hover {
-    color:rgb(18, 233, 233);
-}    */
-
-/* .wrapper .menu-bar ul {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    justify-content: space-around;
-    padding: 20px 14px;
-    border-radius: 4px;
-} */
-
-/* .wrapper .menu-bar ul li {
-    width: 180px;
-    margin-top: 15px;
-}
-
-.wrapper .menu-bar ul li a{
-    padding: 10px 10px;
-    color: black;
-    
-}
-
-.wrapper .menu-bar ul li a:hover {
-    background-color: cornflowerblue;
-    display: block;
-    border-radius: 4px;
-}
-
-.wrapper .menu-bar li:hover ul  {
-    display:block;
-} */
-
-
-/* label focus color */
-/* #search-input input[type=text]:focus + label {
-    color: #000;
-} */
-  
-/* label underline focus color */
-/* #search-input input[type=text]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-} */
-  
-/* valid color */
-/* #search-input input[type=text].valid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-} */
-
-/* invalid color */
-/* #search-input input[type=text].invalid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-} */
-
-/* icon prefix focus color */
-/* #search-input .prefix.active {
-    color: #000;
-} */
-
-  /* footer section styling */
