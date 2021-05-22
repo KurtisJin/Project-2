@@ -122,8 +122,8 @@ a.nav-link:hover {
 
 
 footer {
-    position: sticky;
-    bottom: 0px;
+    position: relative;
+    bottom: 0vh;
     width: 100%;
     color: cornsilk !important;
     background-color: rgba(0, 0, 0, 0.63);
