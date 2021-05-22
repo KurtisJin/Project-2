@@ -32,14 +32,16 @@
     <h3>Festivals Attending:</h3>
 
     {{#each festivals as |festival|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/festival/{{festival.id}}">{{festival.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{festival.id}}">DELETE</button>
-      </div>
-    </div>
+    <ul class="collection">
+      <li class="collection-item avatar">
+        <img src={{festival.logo}} alt="" class="circle">
+        <span class="title">{{festival.name}}</span>
+        <p>{{festival.date}}</p>
+        <p>{{festival.start}}</p>
+        <p>{{festival.status}}</p>
+        <p>{{festival.venues}}</p>
+      </li>
+    </ul>
     {{/each}}
   </div>
   {{/if}}
