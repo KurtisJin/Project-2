@@ -3,16 +3,15 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    /* border: 2px dotted red; */
+    border: 2px dotted red;
 }
 
-body {
-    background: url("/pictures/rainbowconfetti.jpg") no-repeat center;
-}
 
 /* homePage section styling */
 .homePage {
     /* display: flex; */
+    background: url("/pictures/rainbowconfetti.jpg") no-repeat center;
+    height: 100vh;
     color: cornsilk;
     min-height: 700px;
     /* background-size: cover; */
@@ -39,22 +38,23 @@ nav i.material-icons {
     height: 40px !important;
 }
 
-/* a.nav-link {
+a.nav-link {
     
-} */
+}
 
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: space-between;
 }
 
 #search-form {
     display: flex;
-    position: relative;
+    position:relative;
+    /* border-radius: 50%; */
     transform: translate(50%, -140%);
     width: 50%;
     align-items: center;
@@ -78,28 +78,28 @@ nav i.material-icons {
     align-items: center;
     padding: 0 !important;
     margin-left: 10px;
-    box-shadow: 10px 30px 60px 30px #000000;
+    box-shadow: 10px 30px 60px 30px #ff3399;
 }
 
 
 footer {
     color: cornsilk !important;
-    background-color: rgba(0, 0, 0, 0.63);
+    background: #111;
     padding: 15px 23px;
     text-align: center;
 }
 
 footer a{
     color: cornsilk !important;
+    text-align: center;
 }
 
 footer a:hover {
-    color: darkorchid !important;
-    text-shadow: 100px 1px 5px rgba(0,255,0,0.72) !important;
+    color: darkorchid;
+    background: transparent;
+    /* text-decoration: underline; */
+    box-shadow: 10px 30px 60px 30px #ff3399;
 }
-
-
-
 
 
 
