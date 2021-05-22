@@ -24,7 +24,6 @@
    
             
 </head>
-  <body>
       <nav>
           <a class="logo" href="/"><img class="logo" alt="logo" src="../pictures/logo4.png"></a>
           <!-- <a href="#" class="sidenav-trigger" data-target="slide_down"><i class="material-icons">menu</i></a> -->
@@ -61,6 +60,8 @@
         </form>
       </nav>
  
+
+<body>
     <main>
       <section id="homePage" class="homePage" ></section>
     
@@ -68,15 +69,12 @@
 
 
     </main>
-  </body>
-  
-  <footer>
-    <a href="#">Home</a> | <a href="#">Contact Us</a> | <a href="#">Logout</a>
-  </footer>
-
-  {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+<footer>
+  <a href="#">Home</a> | <a href="#">Contact Us</a> | <a href="#">Logout</a>
+</footer>
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
   {{/if}}
-    <script src="/js/search.js"></script>
-  
+<script src="/js/search.js"></script>
+</body>
 </html>
