@@ -1,12 +1,13 @@
-// const axios = require('axios');
+const axios = require('axios');
 const { Festival, User } = require('../models');
 const withAuth = require('../utils/auth');
 const router = require('express').Router();
 
 
 router.get('/', async (req, res) => {
-  // let eventId= [];
   try {
+    const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=${process.env.event_API_key}&id=`
+    let eventResults = [];
     const festivalData = await Festival.findAll({
       include: [
         {
@@ -16,39 +17,39 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const festivals = festivalData.map((festival) => festival.get({ plain: true }));
-    console.log(festivals);
-  
-  // let eventResults= [];
-  
-  //   eventId.forEach(ticketId => {
-  //     eventResults.push(await axios.get('https://app.ticketmaster.com/discovery/v2/events?apikey=pETvCuGAevOjovqF0cqFbAly9fYBD9vZ&locale=en-us&countryCode=US&segmentName=music&id=' + ticketId));
-  //   });
 
-  // console.log(eventId);
+    let festivalId = festivalData.map((festival) => festival.get({ plain: true }));
 
-  // eventResult = eventId.data._embedded.events;
+    let user = festivalId[0].user.name;
 
-  // let festivals = eventResults.map((event) => {
+    for (let index = 0; index < festivalId.length; index++) {
+      const results = await axios.get(url + festivalId[index].ticketmaster_id + '&locale=en-us&countryCode=US&segmentName=music');
+        for (let i = 0; i < results.data._embedded.events.length; i++) {
+          eventResults.push(results.data._embedded.events[i]);
+      }
+      await new Promise(resolve => setTimeout(resolve, 205));
+    };
 
-  //   return {
-  //     name: event.name,
-  //     summary: event.description,
-  //     logo: event.images[event.images.length - 1].url,
-  //     status: event.dates.status.code,
-  //     span: event.dates.spanMultipleDays,
-  //     date: event.dates.start.localDate,
-  //     start: event.dates.start.localTime,
-  //     venues: event._embedded.venues[0].name,
-  //     address: event._embedded.venues[0].address.line1,
-  //     city: event._embedded.venues[0].city.name,
-  //     state: event._embedded.venues[0].state.stateCode
-  //   }
-  // });
+  let festivals = eventResults.map((events) => {
+
+    return {
+      name: events.name,
+      summary: events.description,
+      logo: events.images[events.images.length - 1].url,
+      status: events.dates.status.code,
+      span: events.dates.spanMultipleDays,
+      date: events.dates.start.localDate,
+      start: events.dates.start.localTime,
+      venues: events._embedded.venues[0].name,
+      address: events._embedded.venues[0].address.line1,
+      city: events._embedded.venues[0].city.name,
+      state: events._embedded.venues[0].state.stateCode
+    }
+  });
 
   res.render("profile", {
-    // festivals,
-    // user
+    festivals,
+    user,
     logged_in: req.session.logged_in 
   })
   } catch (err) {

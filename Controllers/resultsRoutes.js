@@ -2,7 +2,7 @@ const axios = require('axios');
 const { response } = require('express');
 const router = require('express').Router();
 
-router.get('/:query', async (req, res) => {
+router.get('/:query/:page?', async (req, res) => {
   var searchResult;
   const page = req.params.page ? req.params.page : 1;
   try {
@@ -39,7 +39,7 @@ router.get('/:query', async (req, res) => {
     resultsPages.push({index:index,href:"/results/"+req.params.query+"/"+index});
   }
 
-  console.log(festivals)
+  // console.log(festivals)
 
 
   res.render("results", {

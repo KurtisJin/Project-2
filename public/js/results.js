@@ -7,20 +7,16 @@ const festivalButtonClickHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-  console.log(response);
-  // const retrieve = await fetch(`/api/results`, {
-  //       method: `GET`,
-  //       body: JSON.stringify({  })
-  //       })
 
   if (response.ok) {
-    document.location.replace('/results');
+    alert('Added to your favorites!')
   } else {
     alert('Failed to create festival');
   }
 }
 
+var festivalButtons = document.getElementsByClassName('festival_button')
 
-  document
-  .querySelector('.festival_button')
-  .addEventListener('click', festivalButtonClickHandler );
+for (let i = 0; i < festivalButtons.length; i++) {
+  festivalButtons[i].addEventListener('click', festivalButtonClickHandler);
+};
