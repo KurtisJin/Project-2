@@ -100,6 +100,7 @@ Test was done using node.js with visual studio code, chrome, insomnia, and workb
 
 1. <a href = "https://lineup-festival.herokuapp.com/">Heroku Link</a>
 2. <a href = "https://github.com/KurtisJin/Project-2">Lineup Repo</a>
+3. <a href = "https://docs.google.com/presentation/d/1k0w2tp_dh-VZw588s8cILzF91neeM1vrLcAs4WiKOt4/edit#slide=id.gc6f73a04f_0_0">Google Slides Presentation</a>
 
 ## Questions:
 
