@@ -6,18 +6,14 @@
     /* border: 2px dotted red; */
 }
 
-body {
-    background: url("/pictures/rainbowconfetti.jpg") no-repeat center;
-}
-
-/* homePage section styling */
-.homePage {
-    /* display: flex; */
-    color: cornsilk;
-    min-height: 700px;
-    /* background-size: cover; */
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
+html {
+    background: url("/pictures/rainbowconfetti.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: relative;
 }
 
 .logo {
@@ -27,7 +23,7 @@ body {
 
 /* navigation styling */
 nav {
-    position: fixed;
+    position: relative;
     width: 100%;
     background-color: #ff3399 !important;
     height: 100px !important;
@@ -39,9 +35,6 @@ nav i.material-icons {
     height: 40px !important;
 }
 
-/* a.nav-link {
-    
-} */
 
 .max-width {
     max-width: 1300px;
@@ -83,6 +76,9 @@ nav i.material-icons {
 
 
 footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
     color: cornsilk !important;
     background-color: rgba(0, 0, 0, 0.63);
     padding: 15px 23px;
@@ -98,7 +94,16 @@ footer a:hover {
     text-shadow: 100px 1px 5px rgba(0,255,0,0.72) !important;
 }
 
+.resultsDisplay{
+    padding-top: 20vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
 
+.resultsHead, h2{
+    color: powderblue;
+    text-align: center;
+}
 
 
 
