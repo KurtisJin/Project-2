@@ -1,4 +1,5 @@
 const festivalButtonClickHandler = async (event) => {
+  event.preventDefault();
     const response = await fetch(`/api/festivals`, {
         method: 'POST',
         body: JSON.stringify({ ticketmaster_id: event.target.dataset.id }),
@@ -6,7 +7,7 @@ const festivalButtonClickHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-  
+  console.log(response);
   // const retrieve = await fetch(`/api/results`, {
   //       method: `GET`,
   //       body: JSON.stringify({  })

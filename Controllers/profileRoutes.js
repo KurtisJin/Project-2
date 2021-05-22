@@ -1,17 +1,23 @@
 // const axios = require('axios');
-// const { Festival } = require('../models');
+const { Festival, User } = require('../models');
+const withAuth = require('../utils/auth');
 const router = require('express').Router();
-// const sequelize = require('sequelize');
+
 
 router.get('/', async (req, res) => {
   // let eventId= [];
   try {
-    // eventId = Festival.findAll({
-  //   where: {
-  //     user_id: req.params.id,
-  //   }
-  // });
-  // // console.log(ticketmasterId)
+    const festivalData = await Festival.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const festivals = festivalData.map((festival) => festival.get({ plain: true }));
+    console.log(festivals);
   
   // let eventResults= [];
   
@@ -43,6 +49,7 @@ router.get('/', async (req, res) => {
   res.render("profile", {
     // festivals,
     // user
+    logged_in: req.session.logged_in 
   })
   } catch (err) {
     console.log(err);
