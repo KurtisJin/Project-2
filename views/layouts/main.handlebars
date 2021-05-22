@@ -1,92 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LineUp</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="/js/sidenav.js"></script>
-
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LineUp</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- fonts -->
+    <style> @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');</style>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/sidenav.js"></script>
+   
+            
 </head>
 
-<body>
-  <header>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <ul class="left">
-            <li>
-              <a class="nav-link" href="/"><img class="logo" alt="logo" src="../pictures/logo4.png">
-              </a>
-            </li>
-          </ul>
-          <form id="search-form" class="form">
-            <div class="input-field">
-              <input id="search-input" type="text" name="action" >
-              <label class="label-icon searchButton" for="search"><i class="material-icons">search</i></label>
-            </div>
-          </form>
-          <ul class="right">s
-            <li>
-              <a>
-                <i class="material-icons" href="/profile">notifications_none</i>
-              </a> 
-            </li>
-            <li>
-              <a>
-                <i class="material-icons" href="/signup">notifications_none</i>
-              </a>
-            </li>
-            <ul id="AccountInfo" class="hidden z-depth-5">
-              <li>sdfsdf</li>
-              <li>fghfgh</li>
-              <li>jkjkljkljkl</li>
-              <li>xwcxwcwxcwxc</li>
-            </ul>
-            <li>
-              <a href="">
-                <i class="material-icons nav-link" href="/login">exit_to_app</i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <nav>
+    <a class="logo" href="/"><img class="logo" alt="logo" src="../pictures/logo4.png"></a>
+    <!-- <a href="#" class="sidenav-trigger" data-target="slide_down"><i class="material-icons">menu</i></a> -->
+    {{#if logged_in}}
+      <ul class="right hide-on-med-and-down">
+        <li class="active"><a href="/home">Home</a></li>
+          <span class="username">{{userName}}</span>
+          <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <div class="nav-bar">
+          <a class="nav-link" href="/login">Sign In</a> | <a class="nav-link" href="/signup">Sign Up</a> | <a class="nav-link" href="/profile">Profile</a>
+        {{/if}}
+      </ul>
+      </div>
 
-  <main>
-    <section id="homePage" class="homePage"></section>
-    {{{body}}}
-  </main>
+        <form id="search-form" class="form">
+          <input id="search-input" class="form-input autocomplete" type="text" name="action" placeholder="Search festivals...">
+          <a class="btn waves-effect searchButton"><i class="material-icons">search</i></a>
+        </form>
+      </nav>
+ 
+
+<body>
+    <main>
+      <section id="homePage" class="homePage" ></section>
+    
+        {{{body}}}
+
+    <section class="resultsDisplay">
+      {{> results-display}}
+    </section>
 
     </main>
 <footer>
-  <a href="#">Home</a> | <a href="#">Contact Us</a> | <a href="#" id-"logout">Logout</a>
+  <a href="#">Home</a> | <a href="#">Contact Us</a> | <a href="#">Logout</a>
 </footer>
 {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-  <script src="/js/search.js"></script>
+<script src="/js/search.js"></script>
 </body>
-
 </html>
+
+
+
+
+
+
+
+
+        {{!-- <ul id="slide-out" class="sidenav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="/pictures/rainbowconfetti.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="/pictures/girlface.jpg"></a>
+            <a href="#name"><span class="white-text name">John Doe</span></a>
+            <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>          --}}
